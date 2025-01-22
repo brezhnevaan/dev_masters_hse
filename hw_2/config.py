@@ -7,6 +7,9 @@ logging.basicConfig(level=logging.DEBUG)
 aiohttp_logger = logging.getLogger("aiohttp")
 aiohttp_logger.setLevel(logging.DEBUG)
 
+bot_logger = logging.getLogger("bot")
+bot_logger.setLevel(logging.DEBUG)
+
 load_dotenv()
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")

@@ -7,7 +7,7 @@ from aiogram.filters import Command
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.context import FSMContext
 from aiogram.dispatcher.middlewares.base import BaseMiddleware
-from config import BOT_TOKEN
+from config import BOT_TOKEN, bot_logger
 from api_requests import get_city_temperature, get_product_nutrition, get_exercise_data
 from utils import get_water_norm, get_calories_norm, translate_to_english, get_progress_visualisation
 from pathlib import Path
@@ -104,7 +104,8 @@ def save_users():
 
 class LoggingMiddleware(BaseMiddleware):
     async def __call__(self, handler, event: Message, data: dict):
-        print(f"Получено сообщение: {event.text}")
+        if isinstance(event, Message):
+            bot_logger.debug(f"Получено сообщение: {event.text}")
         return await handler(event, data)
 
 dp.message.middleware(LoggingMiddleware())
