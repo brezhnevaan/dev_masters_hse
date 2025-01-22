@@ -1,11 +1,12 @@
 import re
 import asyncio
 import json
-from aiogram import Bot, Dispatcher
+from aiogram import Bot, Dispatcher, Router
 from aiogram.types import Message, KeyboardButton, ReplyKeyboardMarkup, ReplyKeyboardRemove, BufferedInputFile
 from aiogram.filters import Command
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.context import FSMContext
+from aiogram.dispatcher.middlewares.base import BaseMiddleware
 from config import BOT_TOKEN
 from api_requests import get_city_temperature, get_product_nutrition, get_exercise_data
 from utils import get_water_norm, get_calories_norm, translate_to_english, get_progress_visualisation
@@ -15,7 +16,7 @@ from pathlib import Path
 USER_DATA_FILE = str(Path("/app") / "user_data.json")
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
-# router = Router()
+router = Router()
 
 class User:
     def __init__(self, user_id: int):
@@ -101,8 +102,14 @@ def save_users():
     with open(USER_DATA_FILE, "w", encoding="utf-8") as f:
         json.dump({k: v.to_dict() for k, v in users.items()}, f, indent=4, ensure_ascii=False)
 
+class LoggingMiddleware(BaseMiddleware):
+    async def __call__(self, handler, event: Message, data: dict):
+        print(f"Получено сообщение: {event.text}")
+        return await handler(event, data)
 
-@dp.message(Command("help"))
+dp.message.middleware(LoggingMiddleware())
+
+@router.message(Command("help"))
 async def cmd_help(message: Message):
     print("Help command received")
     await message.reply(
@@ -117,13 +124,13 @@ async def cmd_help(message: Message):
     )
 
 
-@dp.message(Command("start"))
+@router.message(Command("start"))
 async def cmd_start(message: Message):
     await message.reply("Привет! Это бот отслеживания активности и рациона питания 👋"
                         "\nЧтобы начать работу, нужно заполнить профиль. Используйте команду /set_profile.")
 
 
-@dp.message(Command("set_profile"))
+@router.message(Command("set_profile"))
 async def set_profile(message: Message, state: FSMContext):
     user_id = message.from_user.id
     current_date = message.date.date()
@@ -179,7 +186,7 @@ async def set_profile(message: Message, state: FSMContext):
         await state.set_state(UserProfile.weight)
 
 
-@dp.message(UserProfile.confirm_update)
+@router.message(UserProfile.confirm_update)
 async def confirm_update(message: Message, state: FSMContext):
     if message.text.lower() == "да":
         await message.reply("Введите ваш вес в кг:", reply_markup=ReplyKeyboardRemove())
@@ -191,7 +198,7 @@ async def confirm_update(message: Message, state: FSMContext):
         await message.reply("Пожалуйста, выберите 'Да' или 'Нет'.")
 
 
-@dp.message(UserProfile.weight)
+@router.message(UserProfile.weight)
 async def update_weight(message: Message, state: FSMContext):
     try:
         weight = int(message.text)
@@ -206,7 +213,7 @@ async def update_weight(message: Message, state: FSMContext):
         return
 
 
-@dp.message(UserProfile.height)
+@router.message(UserProfile.height)
 async def update_height(message: Message, state: FSMContext):
     try:
         height = int(message.text)
@@ -221,7 +228,7 @@ async def update_height(message: Message, state: FSMContext):
         return
 
 
-@dp.message(UserProfile.age)
+@router.message(UserProfile.age)
 async def update_age(message: Message, state: FSMContext):
     try:
         age = int(message.text)
@@ -236,7 +243,7 @@ async def update_age(message: Message, state: FSMContext):
         return
 
 
-@dp.message(UserProfile.activity)
+@router.message(UserProfile.activity)
 async def update_activity(message: Message, state: FSMContext):
     try:
         activity = int(message.text)
@@ -251,7 +258,7 @@ async def update_activity(message: Message, state: FSMContext):
         return
 
 
-@dp.message(UserProfile.city)
+@router.message(UserProfile.city)
 async def update_city(message: Message, state: FSMContext):
     city = message.text.strip()
     if not city or city.isspace() or not re.match(r"^[a-zA-Zа-яА-Я0-9\s-]+$", city):
@@ -299,7 +306,7 @@ async def update_city(message: Message, state: FSMContext):
     )
 
 
-@dp.message(Command("log_water"))
+@router.message(Command("log_water"))
 async def log_water(message: Message):
     user_id = message.from_user.id
     if user_id not in users:
@@ -340,7 +347,7 @@ async def log_water(message: Message):
         await message.reply(f"Что-то пошло не так 😔 Попробуйте еще раз.")
 
 
-@dp.message(Command("log_food"))
+@router.message(Command("log_food"))
 async def log_food(message: Message, state: FSMContext):
     user_id = message.from_user.id
     if user_id not in users:
@@ -386,7 +393,7 @@ async def log_food(message: Message, state: FSMContext):
         await message.reply(f"Что-то пошло не так 😔 Попробуйте еще раз.")
 
 
-@dp.message(UserFood.logged_amount_g)
+@router.message(UserFood.logged_amount_g)
 async def log_food_amount(message: Message, state: FSMContext):
     user_id = message.from_user.id
 
@@ -431,7 +438,7 @@ async def log_food_amount(message: Message, state: FSMContext):
         await message.reply("Пожалуйста, используйте цифры для ввода веса продукта (целое число).")
 
 
-@dp.message(Command("log_workout"))
+@router.message(Command("log_workout"))
 async def log_workout(message: Message):
     user_id = message.from_user.id
     if user_id not in users:
@@ -515,7 +522,7 @@ async def log_workout(message: Message):
         await message.reply(f"Что-то пошло не так 😔 Попробуйте еще раз.")
 
 
-@dp.message(Command("check_progress"))
+@router.message(Command("check_progress"))
 async def check_progress(message: Message):
     user_id = message.from_user.id
     if user_id not in users:
@@ -577,6 +584,8 @@ async def check_progress(message: Message):
     )
 
     await message.answer_photo(buffered_file)
+
+dp.include_router(router)
 
 async def main():
     try:
