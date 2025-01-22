@@ -1,0 +1,21 @@
+{
+    "678945482": {
+        "user_id": 678945482,
+        "data": {
+            "weight": 65,
+            "height": 173,
+            "age": 27,
+            "activity": 90,
+            "city": "Алматы"
+        },
+        "daily": {
+            "water_goal": 3650,
+            "calorie_goal": 2196.25,
+            "logged_water": 0,
+            "logged_calories": 0,
+            "burned_calories": 840,
+            "workout_minutes": 120,
+            "date": "2025-01-22"
+        }
+    }
+}
