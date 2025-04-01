@@ -1,0 +1,415 @@
+2025-03-31 00:48:57,151 - database - INFO - Connecting to database at localhost:5432/link_shortener_db
+2025-03-31 00:48:57,191 - database - INFO - Database connection established successfully
+2025-03-31 00:02:26,035 - database - INFO - Connecting to database at db:5432/link_shortener_db
+2025-03-31 00:02:26,099 - database - INFO - Database connection established successfully
+2025-03-31 00:02:26,154 - database - INFO - Connecting to database at db:5432/link_shortener_db
+2025-03-31 00:02:26,179 - database - INFO - Database connection established successfully
+2025-03-31 00:02:26,986 - root - INFO - Starting background tasks worker
+2025-03-31 00:02:26,988 - root - INFO - Starting expired links cleanup task
+2025-03-31 00:02:26,989 - root - INFO - Starting expired links cleanup
+2025-03-31 00:02:27,057 - root - INFO - No expired links found
+2025-03-31 00:02:28,492 - database - INFO - Connecting to database at db:5432/link_shortener_db
+2025-03-31 00:02:28,509 - database - INFO - Database connection established successfully
+2025-03-31 00:02:28,569 - app - INFO - Initializing FastAPI application
+2025-03-31 00:02:28,570 - app - INFO - Including auth routers
+2025-03-31 00:02:28,594 - app - INFO - Including links router
+2025-03-31 00:02:28,609 - app - INFO - Application initialized successfully
+2025-03-31 00:02:28,611 - root - INFO - Starting background tasks
+2025-03-31 00:02:28,612 - root - INFO - Starting expired links cleanup task
+2025-03-31 00:02:28,613 - root - INFO - Starting expired links cleanup
+2025-03-31 00:02:28,674 - root - INFO - No expired links found
+2025-03-31 00:02:51,075 - database - INFO - Created new database session
+2025-03-31 00:02:51,089 - app.links.router - INFO - Creating new link for user anonymous
+2025-03-31 00:02:51,094 - root - ERROR - Invalid expires_at format: date contains timezone information
+2025-03-31 00:02:51,095 - database - ERROR - Error creating database session: 
+2025-03-31 00:03:56,349 - database - INFO - Created new database session
+2025-03-31 00:03:56,367 - database - ERROR - Error creating database session: [{'type': 'datetime_parsing', 'loc': ('body', 'expires_at'), 'msg': 'Input should be a valid datetime, invalid datetime separator, expected `T`, `t`, `_` or space', 'input': '2025-03-31', 'ctx': {'error': 'invalid datetime separator, expected `T`, `t`, `_` or space'}, 'url': 'https://errors.pydantic.dev/2.5/v/datetime_parsing'}]
+2025-03-31 00:04:07,511 - database - INFO - Created new database session
+2025-03-31 00:04:07,522 - app.links.router - INFO - Creating new link for user anonymous
+2025-03-31 00:04:07,530 - database - ERROR - Error creating database session: 
+2025-03-31 00:04:13,865 - database - INFO - Created new database session
+2025-03-31 00:04:13,868 - app.links.router - INFO - Creating new link for user anonymous
+2025-03-31 00:04:13,872 - database - ERROR - Error creating database session: 
+2025-03-31 00:04:19,745 - database - INFO - Created new database session
+2025-03-31 00:04:19,747 - app.links.router - INFO - Creating new link for user anonymous
+2025-03-31 00:04:19,750 - root - INFO - Creating link with hard expire: expires_at=2025-03-31 23:00:00, is_soft_expire=False
+2025-03-31 00:04:28,839 - database - INFO - Created new database session
+2025-03-31 00:04:28,840 - app.links.router - INFO - Redirecting to link with short code: test
+2025-03-31 00:04:28,841 - root - INFO - Redirect called for short_code: test
+2025-03-31 00:04:28,842 - root - INFO - Cache: Getting link test
+2025-03-31 00:04:28,849 - root - INFO - Cache: Link test not found
+2025-03-31 00:04:28,849 - root - INFO - Cache: Getting stats for test
+2025-03-31 00:04:28,851 - root - INFO - Cache: Stats for test not found
+2025-03-31 00:04:28,855 - root - INFO - DB: is_soft_expire=False
+2025-03-31 00:04:28,863 - root - INFO - Cache: Saving link test with original_url=https://www.hse.ru/
+2025-03-31 00:04:28,865 - root - INFO - Cache: Link test saved successfully
+2025-03-31 00:04:28,866 - root - INFO - Cache: Saving hard expire stats for test: is_soft_expire=False
+2025-03-31 00:04:28,869 - root - INFO - Redirecting to: https://www.hse.ru/
+2025-03-31 00:04:40,940 - database - INFO - Created new database session
+2025-03-31 00:04:40,947 - passlib.handlers.bcrypt - WARNING - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-03-31 00:04:50,676 - database - INFO - Created new database session
+2025-03-31 00:04:50,684 - app.links.router - INFO - Getting all links for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:04:50,685 - root - INFO - Getting all links for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:04:50,689 - root - INFO - Found 2 links for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:05:06,787 - database - INFO - Created new database session
+2025-03-31 00:05:06,792 - app.links.router - INFO - Getting stats for link HSE by user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:05:06,792 - root - INFO - Cache: Getting stats for HSE
+2025-03-31 00:05:06,795 - root - INFO - Cache: Stats for HSE found: is_soft_expire=False
+2025-03-31 00:05:06,795 - root - INFO - Cache: Getting link HSE
+2025-03-31 00:05:06,797 - root - INFO - Cache: Link HSE found
+2025-03-31 00:05:12,903 - database - INFO - Created new database session
+2025-03-31 00:05:12,907 - app.links.router - INFO - Getting stats for link roll by user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:05:12,908 - root - INFO - Cache: Getting stats for roll
+2025-03-31 00:05:12,911 - root - INFO - Cache: Stats for roll not found
+2025-03-31 00:05:12,912 - root - INFO - Cache: Getting link roll
+2025-03-31 00:05:12,913 - root - INFO - Cache: Link roll not found
+2025-03-31 00:05:12,915 - root - INFO - Stats: Getting stats for roll: is_soft_expire=False, expires_at=2025-04-13 23:04:47.092102
+2025-03-31 00:05:12,916 - root - INFO - Cache: Saving link roll with original_url=https://www.crunchyroll.com/ru/
+2025-03-31 00:05:12,917 - root - INFO - Cache: Link roll saved successfully
+2025-03-31 00:05:12,918 - root - INFO - Cache: Saving hard expire stats for roll: is_soft_expire=False
+2025-03-31 00:05:26,125 - database - INFO - Created new database session
+2025-03-31 00:05:26,136 - app.links.router - INFO - Searching for link with original URL: https://www.crunchyroll.com/ru/ by user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:05:26,137 - root - INFO - Searching for URL: https://www.crunchyroll.com/ru/ for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:05:26,141 - root - INFO - Found 1 links for URL: https://www.crunchyroll.com/ru/
+2025-03-31 00:05:38,634 - database - INFO - Created new database session
+2025-03-31 00:05:38,635 - app.links.router - INFO - Redirecting to link with short code: roll
+2025-03-31 00:05:38,636 - root - INFO - Redirect called for short_code: roll
+2025-03-31 00:05:38,637 - root - INFO - Cache: Getting link roll
+2025-03-31 00:05:38,639 - root - INFO - Cache: Link roll found
+2025-03-31 00:05:38,640 - root - INFO - Cache: Getting stats for roll
+2025-03-31 00:05:38,642 - root - INFO - Cache: Stats for roll found: is_soft_expire=False
+2025-03-31 00:05:38,644 - root - INFO - Redirecting from cache
+2025-03-31 00:05:38,645 - root - INFO - Cache: is_soft_expire=False
+2025-03-31 00:05:38,646 - root - INFO - Cache: Saving hard expire stats for roll: is_soft_expire=False
+2025-03-31 00:05:38,651 - root - INFO - DB: No expires_at update for roll: is_soft_expire=False
+2025-03-31 00:05:45,877 - database - INFO - Created new database session
+2025-03-31 00:05:45,881 - app.links.router - INFO - Downloading links for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:05:50,385 - database - INFO - Created new database session
+2025-03-31 00:05:50,391 - app.links.router - INFO - Getting expired links for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:06:00,178 - database - INFO - Created new database session
+2025-03-31 00:06:00,186 - app.links.router - INFO - Downloading expired links for user: c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:06:21,273 - database - INFO - Created new database session
+2025-03-31 00:06:21,278 - app.links.router - INFO - Reactivating link 1 by user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:06:21,278 - root - INFO - Reactivating expired link 1 for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:06:21,282 - root - INFO - Using original short code: hsehse
+2025-03-31 00:06:21,284 - root - INFO - Setting hard expire: expires_at=2025-04-05 12:00:00
+2025-03-31 00:06:21,291 - root - INFO - Link hsehse reactivated successfully as hsehse
+2025-03-31 00:06:39,433 - database - INFO - Created new database session
+2025-03-31 00:06:39,433 - app.links.router - INFO - Redirecting to link with short code: hsehse
+2025-03-31 00:06:39,435 - root - INFO - Redirect called for short_code: hsehse
+2025-03-31 00:06:39,436 - root - INFO - Cache: Getting link hsehse
+2025-03-31 00:06:39,438 - root - INFO - Cache: Link hsehse not found
+2025-03-31 00:06:39,438 - root - INFO - Cache: Getting stats for hsehse
+2025-03-31 00:06:39,440 - root - INFO - Cache: Stats for hsehse not found
+2025-03-31 00:06:39,445 - root - INFO - DB: is_soft_expire=False
+2025-03-31 00:06:39,449 - root - INFO - Cache: Saving link hsehse with original_url=https://www.hse.ru/
+2025-03-31 00:06:39,451 - root - INFO - Cache: Link hsehse saved successfully
+2025-03-31 00:06:39,452 - root - INFO - Cache: Saving hard expire stats for hsehse: is_soft_expire=False
+2025-03-31 00:06:39,454 - root - INFO - Redirecting to: https://www.hse.ru/
+2025-03-31 00:06:48,688 - database - INFO - Created new database session
+2025-03-31 00:06:48,694 - app.links.router - INFO - Getting stats for link hsehse by user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:06:48,694 - root - INFO - Cache: Getting stats for hsehse
+2025-03-31 00:06:48,696 - root - INFO - Cache: Stats for hsehse found: is_soft_expire=False
+2025-03-31 00:06:48,697 - root - INFO - Cache: Getting link hsehse
+2025-03-31 00:06:48,698 - root - INFO - Cache: Link hsehse found
+2025-03-31 00:06:58,570 - database - INFO - Created new database session
+2025-03-31 00:06:58,574 - app.links.router - INFO - Getting all links for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:06:58,575 - root - INFO - Getting all links for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:06:58,577 - root - INFO - Found 3 links for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:07:30,298 - database - INFO - Created new database session
+2025-03-31 00:07:30,305 - app.links.router - INFO - Searching for link with original URL: https://www.hse.ru/ by user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:07:30,306 - root - INFO - Searching for URL: https://www.hse.ru/ for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:07:30,309 - root - INFO - Found 2 links for URL: https://www.hse.ru/
+2025-03-31 00:08:01,660 - database - INFO - Created new database session
+2025-03-31 00:08:01,666 - app.links.router - INFO - Updating link hsehse by user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:08:01,666 - root - INFO - Updating short code for hsehse to HSE_TEST
+2025-03-31 00:08:01,675 - root - INFO - Cache: Deleting link hsehse
+2025-03-31 00:08:01,677 - root - INFO - Cache: Link hsehse deleted successfully
+2025-03-31 00:08:01,677 - root - INFO - Short code updated successfully from hsehse to HSE_TEST
+2025-03-31 00:08:08,130 - database - INFO - Created new database session
+2025-03-31 00:08:08,136 - app.links.router - INFO - Getting stats for link HSE_TEST by user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:08:08,137 - root - INFO - Cache: Getting stats for HSE_TEST
+2025-03-31 00:08:08,138 - root - INFO - Cache: Stats for HSE_TEST not found
+2025-03-31 00:08:08,139 - root - INFO - Cache: Getting link HSE_TEST
+2025-03-31 00:08:08,140 - root - INFO - Cache: Link HSE_TEST not found
+2025-03-31 00:08:08,143 - root - INFO - Stats: Getting stats for HSE_TEST: is_soft_expire=False, expires_at=2025-04-05 12:00:00
+2025-03-31 00:08:08,144 - root - INFO - Cache: Saving link HSE_TEST with original_url=https://www.hse.ru/
+2025-03-31 00:08:08,146 - root - INFO - Cache: Link HSE_TEST saved successfully
+2025-03-31 00:08:08,146 - root - INFO - Cache: Saving hard expire stats for HSE_TEST: is_soft_expire=False
+2025-03-31 00:08:14,894 - database - INFO - Created new database session
+2025-03-31 00:08:14,897 - app.links.router - INFO - Getting all links for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:08:14,898 - root - INFO - Getting all links for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:08:14,901 - root - INFO - Found 3 links for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:08:22,342 - database - INFO - Created new database session
+2025-03-31 00:08:22,349 - app.links.router - INFO - Getting expired links for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:09:02,594 - database - INFO - Created new database session
+2025-03-31 00:09:02,599 - app.links.router - INFO - Creating new link for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:09:02,602 - root - INFO - Creating link with soft expire: expires_at=2025-04-14 00:09:02.602423, is_soft_expire=True
+2025-03-31 00:09:09,238 - database - INFO - Created new database session
+2025-03-31 00:09:09,255 - app.links.router - INFO - Creating new link for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:09:09,256 - root - INFO - Generating unique code
+2025-03-31 00:09:09,259 - root - INFO - Generated unique code: XKXSJ6UZ6R
+2025-03-31 00:09:09,260 - root - INFO - Creating link with soft expire: expires_at=2025-04-14 00:09:09.260093, is_soft_expire=True
+2025-03-31 00:09:19,188 - database - INFO - Created new database session
+2025-03-31 00:09:19,193 - app.links.router - INFO - Searching for link with original URL: Ссылка успешно создана by user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:09:19,195 - root - INFO - Searching for URL: Ссылка успешно создана for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:09:19,198 - root - ERROR - Link not found for URL: Ссылка успешно создана
+2025-03-31 00:09:19,200 - database - ERROR - Error creating database session: 
+2025-03-31 00:09:25,017 - database - INFO - Created new database session
+2025-03-31 00:09:25,023 - app.links.router - INFO - Searching for link with original URL: https://www.crunchyroll.com/ru/ by user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:09:25,024 - root - INFO - Searching for URL: https://www.crunchyroll.com/ru/ for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:09:25,027 - root - INFO - Found 3 links for URL: https://www.crunchyroll.com/ru/
+2025-03-31 00:09:54,920 - database - INFO - Created new database session
+2025-03-31 00:09:54,921 - app.links.router - INFO - Redirecting to link with short code: XKXSJ6UZ6R
+2025-03-31 00:09:54,923 - root - INFO - Redirect called for short_code: XKXSJ6UZ6R
+2025-03-31 00:09:54,925 - root - INFO - Cache: Getting link XKXSJ6UZ6R
+2025-03-31 00:09:54,930 - root - INFO - Cache: Link XKXSJ6UZ6R not found
+2025-03-31 00:09:54,931 - root - INFO - Cache: Getting stats for XKXSJ6UZ6R
+2025-03-31 00:09:54,934 - root - INFO - Cache: Stats for XKXSJ6UZ6R not found
+2025-03-31 00:09:54,938 - root - INFO - DB: is_soft_expire=True
+2025-03-31 00:09:54,939 - root - INFO - DB: Updating expires_at from 2025-04-14 00:09:09.260093 to 2025-04-14 00:09:54.939537
+2025-03-31 00:09:54,948 - root - INFO - Cache: Saving link XKXSJ6UZ6R with original_url=https://www.crunchyroll.com/ru/
+2025-03-31 00:09:54,953 - root - INFO - Cache: Link XKXSJ6UZ6R saved successfully
+2025-03-31 00:09:54,954 - root - INFO - Cache: Saving soft expire stats for XKXSJ6UZ6R: expires_at=2025-04-14 00:09:54.939537, is_soft_expire=True
+2025-03-31 00:09:54,957 - root - INFO - Redirecting to: https://www.crunchyroll.com/ru/
+2025-03-31 00:09:58,601 - database - INFO - Created new database session
+2025-03-31 00:09:58,601 - app.links.router - INFO - Redirecting to link with short code: XKXSJ6UZ6R
+2025-03-31 00:09:58,602 - root - INFO - Redirect called for short_code: XKXSJ6UZ6R
+2025-03-31 00:09:58,603 - root - INFO - Cache: Getting link XKXSJ6UZ6R
+2025-03-31 00:09:58,605 - root - INFO - Cache: Link XKXSJ6UZ6R found
+2025-03-31 00:09:58,606 - root - INFO - Cache: Getting stats for XKXSJ6UZ6R
+2025-03-31 00:09:58,609 - root - INFO - Cache: Stats for XKXSJ6UZ6R found: is_soft_expire=True
+2025-03-31 00:09:58,610 - root - INFO - Redirecting from cache
+2025-03-31 00:09:58,611 - root - INFO - Cache: is_soft_expire=True
+2025-03-31 00:09:58,613 - root - INFO - Cache: Updating expires_at to 2025-04-14 00:09:58.613032
+2025-03-31 00:09:58,613 - root - INFO - Cache: Saving soft expire stats for XKXSJ6UZ6R: expires_at=2025-04-14 00:09:58.613032, is_soft_expire=True
+2025-03-31 00:09:58,618 - root - INFO - DB: Updating soft expire for XKXSJ6UZ6R: from 2025-04-14 00:09:54.939537 to 2025-04-14 00:09:58.613032
+2025-03-31 00:10:01,879 - database - INFO - Created new database session
+2025-03-31 00:10:01,880 - app.links.router - INFO - Redirecting to link with short code: XKXSJ6UZ6R
+2025-03-31 00:10:01,881 - root - INFO - Redirect called for short_code: XKXSJ6UZ6R
+2025-03-31 00:10:01,882 - root - INFO - Cache: Getting link XKXSJ6UZ6R
+2025-03-31 00:10:01,887 - root - INFO - Cache: Link XKXSJ6UZ6R found
+2025-03-31 00:10:01,889 - root - INFO - Cache: Getting stats for XKXSJ6UZ6R
+2025-03-31 00:10:01,893 - root - INFO - Cache: Stats for XKXSJ6UZ6R found: is_soft_expire=True
+2025-03-31 00:10:01,894 - root - INFO - Redirecting from cache
+2025-03-31 00:10:01,895 - root - INFO - Cache: is_soft_expire=True
+2025-03-31 00:10:01,896 - root - INFO - Cache: Updating expires_at to 2025-04-14 00:10:01.896526
+2025-03-31 00:10:01,897 - root - INFO - Cache: Saving soft expire stats for XKXSJ6UZ6R: expires_at=2025-04-14 00:10:01.896526, is_soft_expire=True
+2025-03-31 00:10:01,904 - root - INFO - DB: Updating soft expire for XKXSJ6UZ6R: from 2025-04-14 00:09:58.613032 to 2025-04-14 00:10:01.896526
+2025-03-31 00:10:12,799 - database - INFO - Created new database session
+2025-03-31 00:10:12,800 - app.links.router - INFO - Redirecting to link with short code: crunch
+2025-03-31 00:10:12,801 - root - INFO - Redirect called for short_code: crunch
+2025-03-31 00:10:12,802 - root - INFO - Cache: Getting link crunch
+2025-03-31 00:10:12,804 - root - INFO - Cache: Link crunch not found
+2025-03-31 00:10:12,805 - root - INFO - Cache: Getting stats for crunch
+2025-03-31 00:10:12,807 - root - INFO - Cache: Stats for crunch not found
+2025-03-31 00:10:12,811 - root - INFO - DB: is_soft_expire=True
+2025-03-31 00:10:12,812 - root - INFO - DB: Updating expires_at from 2025-04-14 00:09:02.602423 to 2025-04-14 00:10:12.812406
+2025-03-31 00:10:12,817 - root - INFO - Cache: Saving link crunch with original_url=https://www.crunchyroll.com/ru/
+2025-03-31 00:10:12,819 - root - INFO - Cache: Link crunch saved successfully
+2025-03-31 00:10:12,820 - root - INFO - Cache: Saving soft expire stats for crunch: expires_at=2025-04-14 00:10:12.812406, is_soft_expire=True
+2025-03-31 00:10:12,822 - root - INFO - Redirecting to: https://www.crunchyroll.com/ru/
+2025-03-31 00:10:16,145 - database - INFO - Created new database session
+2025-03-31 00:10:16,147 - app.links.router - INFO - Redirecting to link with short code: crunch
+2025-03-31 00:10:16,148 - root - INFO - Redirect called for short_code: crunch
+2025-03-31 00:10:16,150 - root - INFO - Cache: Getting link crunch
+2025-03-31 00:10:16,154 - root - INFO - Cache: Link crunch found
+2025-03-31 00:10:16,160 - root - INFO - Cache: Getting stats for crunch
+2025-03-31 00:10:16,162 - root - INFO - Cache: Stats for crunch found: is_soft_expire=True
+2025-03-31 00:10:16,164 - root - INFO - Redirecting from cache
+2025-03-31 00:10:16,166 - root - INFO - Cache: is_soft_expire=True
+2025-03-31 00:10:16,169 - root - INFO - Cache: Updating expires_at to 2025-04-14 00:10:16.169722
+2025-03-31 00:10:16,173 - root - INFO - Cache: Saving soft expire stats for crunch: expires_at=2025-04-14 00:10:16.169722, is_soft_expire=True
+2025-03-31 00:10:16,181 - root - INFO - DB: Updating soft expire for crunch: from 2025-04-14 00:10:12.812406 to 2025-04-14 00:10:16.169722
+2025-03-31 00:10:25,011 - database - INFO - Created new database session
+2025-03-31 00:10:25,016 - app.links.router - INFO - Searching for link with original URL: https://www.crunchyroll.com/ru/ by user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:10:25,017 - root - INFO - Searching for URL: https://www.crunchyroll.com/ru/ for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:10:25,020 - root - INFO - Found 3 links for URL: https://www.crunchyroll.com/ru/
+2025-03-31 00:10:33,665 - database - INFO - Created new database session
+2025-03-31 00:10:33,669 - app.links.router - INFO - Getting stats for link XKXSJ6UZ6R by user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:10:33,670 - root - INFO - Cache: Getting stats for XKXSJ6UZ6R
+2025-03-31 00:10:33,672 - root - INFO - Cache: Stats for XKXSJ6UZ6R found: is_soft_expire=True
+2025-03-31 00:10:33,673 - root - INFO - Cache: Getting link XKXSJ6UZ6R
+2025-03-31 00:10:33,675 - root - INFO - Cache: Link XKXSJ6UZ6R found
+2025-03-31 00:10:49,536 - database - INFO - Created new database session
+2025-03-31 00:10:49,555 - app.links.router - INFO - Getting stats for link crunch by user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:10:49,556 - root - INFO - Cache: Getting stats for crunch
+2025-03-31 00:10:49,557 - root - INFO - Cache: Stats for crunch found: is_soft_expire=True
+2025-03-31 00:10:49,559 - root - INFO - Cache: Getting link crunch
+2025-03-31 00:10:49,560 - root - INFO - Cache: Link crunch found
+2025-03-31 00:11:22,544 - database - INFO - Created new database session
+2025-03-31 00:11:22,549 - app.links.router - INFO - Downloading links for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:11:26,884 - database - INFO - Created new database session
+2025-03-31 00:11:26,888 - app.links.router - INFO - Getting all links for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:11:26,889 - root - INFO - Getting all links for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:11:26,892 - root - INFO - Found 5 links for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:12:15,009 - database - INFO - Created new database session
+2025-03-31 00:12:15,028 - app.links.router - INFO - Creating new link for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:12:15,030 - root - INFO - Creating link with hard expire: expires_at=2025-03-31 00:20:00, is_soft_expire=False
+2025-03-31 00:12:23,846 - database - INFO - Created new database session
+2025-03-31 00:12:23,851 - app.links.router - INFO - Searching for link with original URL: https://www.crunchyroll.com/ru/ by user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:12:23,852 - root - INFO - Searching for URL: https://www.crunchyroll.com/ru/ for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:12:23,856 - root - INFO - Found 4 links for URL: https://www.crunchyroll.com/ru/
+2025-03-31 00:12:27,157 - root - INFO - Starting expired links cleanup
+2025-03-31 00:12:27,160 - root - INFO - No expired links found
+2025-03-31 00:12:28,682 - root - INFO - Starting expired links cleanup
+2025-03-31 00:12:28,685 - root - INFO - No expired links found
+2025-03-31 00:12:37,887 - database - INFO - Created new database session
+2025-03-31 00:12:37,888 - app.links.router - INFO - Redirecting to link with short code: rolling
+2025-03-31 00:12:37,889 - root - INFO - Redirect called for short_code: rolling
+2025-03-31 00:12:37,890 - root - INFO - Cache: Getting link rolling
+2025-03-31 00:12:37,893 - root - INFO - Cache: Link rolling not found
+2025-03-31 00:12:37,894 - root - INFO - Cache: Getting stats for rolling
+2025-03-31 00:12:37,896 - root - INFO - Cache: Stats for rolling not found
+2025-03-31 00:12:37,900 - root - INFO - DB: is_soft_expire=False
+2025-03-31 00:12:37,905 - root - INFO - Cache: Saving link rolling with original_url=https://www.crunchyroll.com/ru/
+2025-03-31 00:12:37,907 - root - INFO - Cache: Link rolling saved successfully
+2025-03-31 00:12:37,908 - root - INFO - Cache: Saving hard expire stats for rolling: is_soft_expire=False
+2025-03-31 00:12:37,911 - root - INFO - Redirecting to: https://www.crunchyroll.com/ru/
+2025-03-31 00:12:45,403 - database - INFO - Created new database session
+2025-03-31 00:12:45,409 - app.links.router - INFO - Getting all links for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:12:45,410 - root - INFO - Getting all links for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:12:45,412 - root - INFO - Found 6 links for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:13:02,849 - database - INFO - Created new database session
+2025-03-31 00:13:02,853 - app.links.router - INFO - Deleting link crunch by user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:13:02,854 - root - INFO - Deleting link crunch for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:13:02,858 - root - INFO - Cache: Deleting link crunch
+2025-03-31 00:13:02,860 - root - INFO - Cache: Link crunch deleted successfully
+2025-03-31 00:13:02,860 - root - INFO - Link crunch deleted successfully
+2025-03-31 00:13:28,136 - database - INFO - Created new database session
+2025-03-31 00:13:28,143 - app.links.router - INFO - Updating link XKXSJ6UZ6R by user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:13:28,143 - root - INFO - Updating short code for XKXSJ6UZ6R to crunch
+2025-03-31 00:13:28,150 - root - INFO - Cache: Deleting link XKXSJ6UZ6R
+2025-03-31 00:13:28,151 - root - INFO - Cache: Link XKXSJ6UZ6R deleted successfully
+2025-03-31 00:13:28,152 - root - INFO - Short code updated successfully from XKXSJ6UZ6R to crunch
+2025-03-31 00:13:35,549 - database - INFO - Created new database session
+2025-03-31 00:13:35,553 - app.links.router - INFO - Getting stats for link crunch by user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:13:35,554 - root - INFO - Cache: Getting stats for crunch
+2025-03-31 00:13:35,556 - root - INFO - Cache: Stats for crunch not found
+2025-03-31 00:13:35,557 - root - INFO - Cache: Getting link crunch
+2025-03-31 00:13:35,558 - root - INFO - Cache: Link crunch not found
+2025-03-31 00:13:35,560 - root - INFO - Stats: Getting stats for crunch: is_soft_expire=True, expires_at=2025-04-14 00:10:01.896526
+2025-03-31 00:13:35,560 - root - INFO - Cache: Saving link crunch with original_url=https://www.crunchyroll.com/ru/
+2025-03-31 00:13:35,562 - root - INFO - Cache: Link crunch saved successfully
+2025-03-31 00:13:35,563 - root - INFO - Cache: Saving soft expire stats for crunch: expires_at=2025-04-14 00:10:01.896526, is_soft_expire=True
+2025-03-31 00:13:40,518 - database - INFO - Created new database session
+2025-03-31 00:13:40,524 - app.links.router - INFO - Getting all links for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:13:40,524 - root - INFO - Getting all links for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:13:40,526 - root - INFO - Found 5 links for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:13:58,588 - database - INFO - Created new database session
+2025-03-31 00:13:58,594 - app.links.router - INFO - Getting expired links for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:14:03,485 - database - INFO - Created new database session
+2025-03-31 00:14:03,489 - app.links.router - INFO - Downloading expired links for user: c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:22:27,267 - root - INFO - Starting expired links cleanup
+2025-03-31 00:22:27,275 - root - INFO - Found 1 expired links
+2025-03-31 00:22:27,275 - root - INFO - Moving expired link rolling to expired_links table for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:22:27,276 - root - INFO - Cache: Deleting link rolling
+2025-03-31 00:22:27,283 - root - INFO - Cache: Link rolling deleted successfully
+2025-03-31 00:22:27,294 - root - INFO - Successfully processed 1 expired links
+2025-03-31 00:22:28,694 - root - INFO - Starting expired links cleanup
+2025-03-31 00:22:28,701 - root - INFO - No expired links found
+2025-03-31 00:22:39,037 - database - INFO - Created new database session
+2025-03-31 00:22:39,041 - app.links.router - INFO - Getting expired links for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:22:48,083 - database - INFO - Created new database session
+2025-03-31 00:22:48,087 - app.links.router - INFO - Downloading expired links for user: c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:23:03,048 - database - INFO - Created new database session
+2025-03-31 00:23:03,054 - app.links.router - INFO - Reactivating link 2 by user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:23:03,055 - root - INFO - Reactivating expired link 2 for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:23:03,057 - root - INFO - Using original short code: rollingroll
+2025-03-31 00:23:03,060 - root - INFO - Setting hard expire: expires_at=2025-03-31 10:00:00
+2025-03-31 00:23:03,065 - root - INFO - Link rollingroll reactivated successfully as rollingroll
+2025-03-31 00:23:15,255 - database - INFO - Created new database session
+2025-03-31 00:23:15,259 - app.links.router - INFO - Getting stats for link rollingroll by user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:23:15,259 - root - INFO - Cache: Getting stats for rollingroll
+2025-03-31 00:23:15,262 - root - INFO - Cache: Stats for rollingroll not found
+2025-03-31 00:23:15,262 - root - INFO - Cache: Getting link rollingroll
+2025-03-31 00:23:15,264 - root - INFO - Cache: Link rollingroll not found
+2025-03-31 00:23:15,265 - root - INFO - Stats: Getting stats for rollingroll: is_soft_expire=False, expires_at=2025-03-31 10:00:00
+2025-03-31 00:23:15,266 - root - INFO - Cache: Saving link rollingroll with original_url=https://www.crunchyroll.com/ru//
+2025-03-31 00:23:15,267 - root - INFO - Cache: Link rollingroll saved successfully
+2025-03-31 00:23:15,268 - root - INFO - Cache: Saving hard expire stats for rollingroll: is_soft_expire=False
+2025-03-31 00:23:26,513 - database - INFO - Created new database session
+2025-03-31 00:23:26,514 - app.links.router - INFO - Redirecting to link with short code: rollingroll
+2025-03-31 00:23:26,515 - root - INFO - Redirect called for short_code: rollingroll
+2025-03-31 00:23:26,515 - root - INFO - Cache: Getting link rollingroll
+2025-03-31 00:23:26,517 - root - INFO - Cache: Link rollingroll found
+2025-03-31 00:23:26,518 - root - INFO - Cache: Getting stats for rollingroll
+2025-03-31 00:23:26,520 - root - INFO - Cache: Stats for rollingroll found: is_soft_expire=False
+2025-03-31 00:23:26,521 - root - INFO - Redirecting from cache
+2025-03-31 00:23:26,522 - root - INFO - Cache: is_soft_expire=False
+2025-03-31 00:23:26,523 - root - INFO - Cache: Saving hard expire stats for rollingroll: is_soft_expire=False
+2025-03-31 00:23:26,529 - root - INFO - DB: No expires_at update for rollingroll: is_soft_expire=False
+2025-03-31 00:23:38,933 - database - INFO - Created new database session
+2025-03-31 00:23:38,938 - app.links.router - INFO - Getting all links for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:23:38,938 - root - INFO - Getting all links for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:23:38,941 - root - INFO - Found 5 links for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:23:54,060 - database - INFO - Created new database session
+2025-03-31 00:23:54,068 - app.links.router - INFO - Downloading expired links for user: c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:23:59,335 - database - INFO - Created new database session
+2025-03-31 00:23:59,339 - app.links.router - INFO - Getting expired links for user c6b3f274-f1f6-4905-91ec-69f92266a3e4
+2025-03-31 00:24:13,589 - database - INFO - Created new database session
+2025-03-31 00:24:13,591 - database - ERROR - Error creating database session: 
+2025-03-31 00:24:40,625 - database - INFO - Created new database session
+2025-03-31 00:24:40,628 - app.links.router - INFO - Creating new link for user anonymous
+2025-03-31 00:24:40,630 - root - INFO - Creating link with hard expire: expires_at=2025-03-31 00:50:00, is_soft_expire=False
+2025-03-31 00:24:49,324 - database - INFO - Created new database session
+2025-03-31 00:24:49,327 - database - ERROR - Error creating database session: 
+2025-03-31 00:24:58,561 - database - INFO - Created new database session
+2025-03-31 00:24:58,562 - app.links.router - INFO - Redirecting to link with short code: crynchu
+2025-03-31 00:24:58,563 - root - INFO - Redirect called for short_code: crynchu
+2025-03-31 00:24:58,565 - root - INFO - Cache: Getting link crynchu
+2025-03-31 00:24:58,569 - root - INFO - Cache: Link crynchu not found
+2025-03-31 00:24:58,570 - root - INFO - Cache: Getting stats for crynchu
+2025-03-31 00:24:58,572 - root - INFO - Cache: Stats for crynchu not found
+2025-03-31 00:24:58,576 - root - INFO - DB: is_soft_expire=False
+2025-03-31 00:24:58,581 - root - INFO - Cache: Saving link crynchu with original_url=https://www.crunchyroll.com/ru/
+2025-03-31 00:24:58,584 - root - INFO - Cache: Link crynchu saved successfully
+2025-03-31 00:24:58,584 - root - INFO - Cache: Saving hard expire stats for crynchu: is_soft_expire=False
+2025-03-31 00:24:58,588 - root - INFO - Redirecting to: https://www.crunchyroll.com/ru/
+2025-03-31 00:25:03,542 - database - INFO - Created new database session
+2025-03-31 00:25:03,543 - app.links.router - INFO - Redirecting to link with short code: crynchu
+2025-03-31 00:25:03,544 - root - INFO - Redirect called for short_code: crynchu
+2025-03-31 00:25:03,545 - root - INFO - Cache: Getting link crynchu
+2025-03-31 00:25:03,547 - root - INFO - Cache: Link crynchu found
+2025-03-31 00:25:03,548 - root - INFO - Cache: Getting stats for crynchu
+2025-03-31 00:25:03,550 - root - INFO - Cache: Stats for crynchu found: is_soft_expire=False
+2025-03-31 00:25:03,551 - root - INFO - Redirecting from cache
+2025-03-31 00:25:03,551 - root - INFO - Cache: is_soft_expire=False
+2025-03-31 00:25:03,553 - root - INFO - Cache: Saving hard expire stats for crynchu: is_soft_expire=False
+2025-03-31 00:25:03,557 - root - INFO - DB: No expires_at update for crynchu: is_soft_expire=False
+2025-03-31 00:25:07,088 - database - INFO - Created new database session
+2025-03-31 00:25:07,089 - app.links.router - INFO - Redirecting to link with short code: crynchu
+2025-03-31 00:25:07,090 - root - INFO - Redirect called for short_code: crynchu
+2025-03-31 00:25:07,092 - root - INFO - Cache: Getting link crynchu
+2025-03-31 00:25:07,094 - root - INFO - Cache: Link crynchu found
+2025-03-31 00:25:07,095 - root - INFO - Cache: Getting stats for crynchu
+2025-03-31 00:25:07,097 - root - INFO - Cache: Stats for crynchu found: is_soft_expire=False
+2025-03-31 00:25:07,097 - root - INFO - Redirecting from cache
+2025-03-31 00:25:07,098 - root - INFO - Cache: is_soft_expire=False
+2025-03-31 00:25:07,100 - root - INFO - Cache: Saving hard expire stats for crynchu: is_soft_expire=False
+2025-03-31 00:25:07,105 - root - INFO - DB: No expires_at update for crynchu: is_soft_expire=False
+2025-03-31 00:25:16,975 - database - INFO - Created new database session
+2025-03-31 00:25:16,977 - app.links.router - INFO - Creating new link for user anonymous
+2025-03-31 00:25:16,982 - database - ERROR - Error creating database session: 
+2025-03-31 00:25:22,090 - database - INFO - Created new database session
+2025-03-31 00:25:22,096 - app.links.router - INFO - Creating new link for user anonymous
+2025-03-31 00:25:22,097 - root - INFO - Generating unique code
+2025-03-31 00:25:22,101 - root - INFO - Generated unique code: M7K501LYEQ
+2025-03-31 00:25:22,102 - root - INFO - Creating link with soft expire: expires_at=2025-04-14 00:25:22.102456, is_soft_expire=True
+2025-03-31 00:25:34,467 - database - INFO - Created new database session
+2025-03-31 00:25:34,468 - app.links.router - INFO - Redirecting to link with short code: M7K501LYEQ
+2025-03-31 00:25:34,469 - root - INFO - Redirect called for short_code: M7K501LYEQ
+2025-03-31 00:25:34,470 - root - INFO - Cache: Getting link M7K501LYEQ
+2025-03-31 00:25:34,473 - root - INFO - Cache: Link M7K501LYEQ not found
+2025-03-31 00:25:34,474 - root - INFO - Cache: Getting stats for M7K501LYEQ
+2025-03-31 00:25:34,478 - root - INFO - Cache: Stats for M7K501LYEQ not found
+2025-03-31 00:25:34,483 - root - INFO - DB: is_soft_expire=True
+2025-03-31 00:25:34,483 - root - INFO - DB: Updating expires_at from 2025-04-14 00:25:22.102456 to 2025-04-14 00:25:34.483907
+2025-03-31 00:25:34,489 - root - INFO - Cache: Saving link M7K501LYEQ with original_url=https://www.crunchyroll.com/ru/
+2025-03-31 00:25:34,491 - root - INFO - Cache: Link M7K501LYEQ saved successfully
+2025-03-31 00:25:34,492 - root - INFO - Cache: Saving soft expire stats for M7K501LYEQ: expires_at=2025-04-14 00:25:34.483907, is_soft_expire=True
+2025-03-31 00:25:34,494 - root - INFO - Redirecting to: https://www.crunchyroll.com/ru/
