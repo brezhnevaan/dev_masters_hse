@@ -45,7 +45,6 @@ Request:
     "is_superuser": false,      
     "is_verified": false        
 }
-}
 
 Response:
 {
@@ -176,7 +175,7 @@ Response:
   "short_code": "string",
   "created_at": "2025-04-01 16:41:19.352130",
   "last_click_at": "2025-04-01 16:41:19.352130",
-  "clicks": int
+  "clicks": 0
 }
 
 ```
@@ -197,7 +196,7 @@ Response:
       "original_url": "https://example.com",
       "created_at": "2025-04-01T16:45:52.191Z",
       "expires_at": "2025-04-01T16:45:52.191Z",
-      "clicks": int,
+      "clicks": 0,
       "last_click_at": "2025-04-01T16:45:52.191Z"
     }
   ]
@@ -212,9 +211,9 @@ Response:
 ```http
 GET /links/my_links/download
 
-Response: CSV file with headers
-Short Code, Original URL, Created At, Expires At, Clicks, Last Click At
+Response: CSV file
 ```
+Структура csv-файла: Short Code, Original URL, Created At, Expires At, Clicks, Last Click At.
 
 #### Получение всех истекших ссылок пользователя
 
@@ -249,9 +248,10 @@ Response:
 ```http
 GET /links/expired/download
 
-Response: CSV file with headers
-id, Short Code, Original URL, Created At, Expires At, Clicks, Last Click At
+Response: CSV file
+
 ```
+Структура csv-файла: id, Short Code, Original URL, Created At, Expires At, Clicks, Last Click At
 
 #### Реактивация истекшей ссылки
 
